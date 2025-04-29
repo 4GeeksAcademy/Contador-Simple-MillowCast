@@ -9,3 +9,8 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.counters{
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+}

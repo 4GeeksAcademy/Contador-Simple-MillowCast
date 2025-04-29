@@ -1,26 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
-
+import Digit from "./Digit";
 //create your first component
-const Home = () => {
+const Home = ({five, four, three, two, one}) => {
+	
 	return (
-		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="counters d-flex fs-2 justify-content-center bg-dark text-success">
+			<div className="clock mx-2 border border-secundary-subtle">
+				<i className="fa-solid fa-clock"><img src="/src/img/clock.gif" alt="" /></i>
+			</div>
+			<Digit digit={five} />
+			<Digit digit={four} />
+			<Digit digit={three} />
+			<Digit digit={two} />
+			<Digit digit={one} />
+			
 		</div>
 	);
 };
